@@ -10,13 +10,14 @@
 	</parent>
 	<groupId>com.myapp</groupId>
 	<artifactId>webservice</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<name>SuperMartWebService</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
 		<java.version>1.8</java.version>
 		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
+		<jar.finalName>WebApp</jar.finalName>
 	</properties>
 
 	<dependencies>
@@ -38,7 +39,18 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			
+			<plugin>
+	            <groupId>org.apache.maven.plugins</groupId>
+	            <artifactId>maven-jar-plugin</artifactId>
+	            <version>3.0.2</version>
+	            <configuration>
+	                <finalName>WebApp</finalName>
+	            </configuration>
+        	</plugin>        
 		</plugins>
+		
+		 
 	</build>
 
 </project>
